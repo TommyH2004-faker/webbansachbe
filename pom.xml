@@ -129,6 +129,11 @@
             <artifactId>cloudinary-taglib</artifactId>
             <version>1.31.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
 
     </dependencies>

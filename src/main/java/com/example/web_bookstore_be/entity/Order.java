@@ -25,9 +25,9 @@ public class Order {
     @Column(name = "total_price_product")
     private double totalPriceProduct; // Tổng tiền sản phẩm
     @Column(name = "fee_delivery")
-    private double feeDelivery; // Chi phí giao hàng
+    private Double feeDelivery; // Chi phí giao hàng
     @Column(name = "fee_payment")
-    private double feePayment; // Chi phí thanh toán
+    private Double feePayment; // Chi phí thanh toán
     @Column(name = "total_price")
     private double totalPrice; // Tổng tiền
     @Column(name = "status")

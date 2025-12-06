@@ -128,10 +128,16 @@ public class UserServiceImpl implements UserSerVice {
             }
 
             // Set ngày sinh cho user
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSX");
+            /*DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSX");
             Instant instant = Instant.from(formatter.parse((String.valueOf(userJson.get("dateOfBirth")))) );
             java.sql.Date dateOfBirth = new java.sql.Date(Date.from(instant).getTime());
+            user.setDateOfBirth(dateOfBirth);*/
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSX");
+            String dateText = userJson.get("dateOfBirth").asText();
+            Instant instant = Instant.from(formatter.parse(dateText));
+            java.sql.Date dateOfBirth = new java.sql.Date(Date.from(instant).getTime());
             user.setDateOfBirth(dateOfBirth);
+
 
             // Set role cho user
             int idRoleRequest = Integer.parseInt(String.valueOf(userJson.get("role")));

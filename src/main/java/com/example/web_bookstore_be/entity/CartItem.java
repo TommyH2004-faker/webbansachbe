@@ -20,13 +20,13 @@ public class CartItem {
     @ManyToOne()
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
-
     @Override
-    public String toString() {
-        return "CartItem{" +
-                "idCart=" + idCart +
-                ", quantity=" + quantity +
-                ", book=" + book.getIdBook() +
-                '}';
-    }
+        public String toString() {
+            return "CartItem{" +
+                    "idCart=" + idCart +
+                    ", quantity=" + quantity +
+                    ", book=" + book.getIdBook() +
+                    '}';
+        }
 }
+

@@ -17,7 +17,7 @@ public class UploadImageImp implements UploadImageService {
     public String uploadImage(MultipartFile multipartFile, String name) {
         String url = "";
         try{
-             url = cloudinary.uploader()
+            url = cloudinary.uploader()
                     .upload(multipartFile.getBytes(), Map.of("public_id", name))
                     .get("url")
                     .toString();
